@@ -1,3 +1,3 @@
 ## JavaScript modal
 
- ![Image alt](https://github.com/EvgeniyBudaev/Balloon/raw/master/public/images/readme1.jpg)
+ ![Image alt](https://github.com/EvgeniyBudaev/js-modal/raw/master/public/images/readme1.jpg)
