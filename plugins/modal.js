@@ -1,5 +1,4 @@
 Element.prototype.appendAfter = function(element) {
-  console.log('element', element);
   element.parentNode.insertBefore(this, element.nextSibling)
 }
 
@@ -44,7 +43,6 @@ function _createModal(options) {
 </div>
   `)
   const footer = _createModalFooter(options.footerButtons)
-  console.log('footer', modal.querySelector('[data-content]'));
   footer.appendAfter(modal.querySelector('[data-content]'))
   document.body.appendChild(modal)
   return modal
@@ -70,6 +68,9 @@ $.modal = function(options) {
       setTimeout(() => {
         $modal.classList.remove('hide')
         closing = false
+        if (typeof options.onClose === 'function') {
+          options.onClose()
+        }
       }, ANIMATION_SPEED)
     },
   }
